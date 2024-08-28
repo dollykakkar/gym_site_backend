@@ -11,13 +11,11 @@ const addUser = async(req,res)=>{
             res.send("This Email already exists.")
             return true;
         }
-
         const newUser = new User({
             username :userData.username,
             email:userData.email,
             password:userData.password
         })
-
         try {
             await newUser.save()
             console.log("New user Added.")

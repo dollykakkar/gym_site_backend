@@ -7,7 +7,16 @@ const coachesSchema = mongoose.Schema({
     },
     from:{
         type:Date,
-        
+        require:true
+    },
+    to:{
+        type:Date,
+        require:true
+    },
+    id:{
+        type:String,
+        unique:true,
+        required:true
     }
 })
 

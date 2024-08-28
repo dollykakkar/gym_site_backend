@@ -5,16 +5,25 @@ const app = express();
 const cors = require("cors");
 const addUser = require("./controller/addUserController");
 const getUser = require("./controller/getUserController");
+const addCoach = require("./controller/addCoachController");
+const addAdmin = require("./controller/addAdminController");
+const getAdmin = require("./controller/getAdminController");
+const getCoaches = require("./controller/getCoachesController");
+const addEquipment = require("./controller/addEquipmentController");
 
 connectDB();
 app.use(cors())
 app.use(express.json())
-const port = 6000
+const port = 5000;
 
 
 app.post("/signup",addUser)
-app.post("/signin",getUser)
-
+app.post("/login",getUser)
+app.post("/addcoach",addCoach)
+app.get("/getcoaches",getCoaches)
+app.post("/addequipment" ,addEquipment)
+app.post("/addadmin",addAdmin)
+app.post("/getadmin",getAdmin)
 
 
 
