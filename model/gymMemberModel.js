@@ -10,10 +10,9 @@ const memberSchema = mongoose.Schema({
         require:true,
         unique:true,
     },
-    phoneNo:{
-        type:Number,
+    phoneno:{
+        type:String,
         require:true,
-        unique:true,
     },
     date:{
         type:Date,
@@ -23,7 +22,7 @@ const memberSchema = mongoose.Schema({
         type:String,
         require:true,
     },
-    amount:{
+    price:{
         type:Number,
         require:true
     }
